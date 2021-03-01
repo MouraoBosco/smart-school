@@ -1,4 +1,17 @@
 <app-titulo [titulo]= "titulo"></app-titulo>
-<ul>
-  <li *ngFor = 'let disciplina of disciplinas'>{{disciplina.nome}}</li>
-</ul>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Disciplina</th>
+      <th scope="col">Professor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = 'let disciplina of disciplinas' style="cursor: pointer;">
+      <th scope="row">{{disciplina.id}}</th>
+      <td>{{disciplina.nome}}</td>
+      <td>{{disciplina.professor}}</td>
+    </tr>
+  </tbody>
+</table>

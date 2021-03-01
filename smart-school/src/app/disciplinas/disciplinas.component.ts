@@ -9,13 +9,11 @@ export class DisciplinasComponent implements OnInit {
 
   public titulo = 'Disciplinas';
   public disciplinas = [
-    { nome:'Matemática'},
-    { nome:'Português'},
-    { nome:'Filosofia'},
-    { nome:'Física'},
-    { nome:'Química'},
-    { nome:'História'},
-    { nome:'Geografia'},
+    {id:1, nome:'Matemática', professor: 'Raphael'},
+    {id:2, nome:'Português', professor:'Glória' },
+    {id:3, nome:'Programação', professor:'Sérgio' },
+    {id:4, nome:'Física', professor:'Tereza' },
+    {id:5, nome:'Inglês', professor:'Valéria' },
   ];
 
   constructor() { }
