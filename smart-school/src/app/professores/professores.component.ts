@@ -10,9 +10,9 @@ import { Professor } from '../models/Professor';
 })
 export class ProfessoresComponent implements OnInit {
 
-  public professorForm: FormGroup;
   public profSelecionado: Professor;
   public titulo = 'Professores';
+  public professorForm: FormGroup;
   public modalRef: BsModalRef;
   
   public professores = [

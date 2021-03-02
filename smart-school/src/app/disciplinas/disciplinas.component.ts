@@ -10,9 +10,9 @@ import { Disciplina } from '../models/Disciplina';
 })
 export class DisciplinasComponent implements OnInit {
 
-  public discForm: FormGroup;
   public discSelecionada: Disciplina;
   public titulo = 'Disciplinas';
+  public discForm: FormGroup;
   public modalRef: BsModalRef;
 
 
@@ -29,7 +29,7 @@ export class DisciplinasComponent implements OnInit {
   }
 
   constructor(private fb:FormBuilder,
-    private modalService: BsModalService,       
+    private modalService: BsModalService,
     ) {
     this.criarForm();
    }

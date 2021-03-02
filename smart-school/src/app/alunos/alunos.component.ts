@@ -30,12 +30,22 @@ export class AlunosComponent implements OnInit {
   }
 
   constructor(private fb: FormBuilder, 
-              private modalService: BsModalService) {
+              private modalService: BsModalService
+    ) {
     this.criarForm();
    }
    ngOnInit() {
 
    }
+
+   criarForm() {
+     this.alunoForm = this.fb.group({
+       nome: ['', Validators.required],
+       sobrenome:['', Validators.required],
+       telefone:['', Validators.required],
+     });
+   }
+
   alunoSelect(aluno:Aluno) {
 
     this.alunoSelecionado = aluno;
@@ -49,13 +59,5 @@ export class AlunosComponent implements OnInit {
   voltar() {
     this.alunoSelecionado = null;
   }
-
-  criarForm() {
-    this.alunoForm = this.fb.group({
-      nome: ['', Validators.required],
-      sobrenome:['', Validators.required],
-      telefone:['', Validators.required],
-    });
-  }
-  
+ 
 }
