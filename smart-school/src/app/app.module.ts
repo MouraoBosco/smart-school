@@ -12,6 +12,9 @@ import { NavComponent } from './nav/nav.component';
 import { TituloComponent } from './titulo/titulo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [									
@@ -22,13 +25,17 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
       DashboardComponent,
       PerfilComponent,
       NavComponent,
-      TituloComponent
+      TituloComponent,
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
